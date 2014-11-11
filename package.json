@@ -4,7 +4,9 @@
   "description": "Yeoman generator for koa development",
   "license": "MIT",
   "main": "app/index.js",
+
   "repository": "AttilaSATAN/generator/lupus",
+
   "author": {
     "name": "Attila SATAN",
     "email": "attila.satan@gmail.com",
