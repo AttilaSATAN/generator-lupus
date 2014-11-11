@@ -1,0 +1,34 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@2.0.0
+3 info using node@v0.11.14-nightly-20140819-pre
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart my-koa-seed@0.0.1
+6 info start my-koa-seed@0.0.1
+7 verbose unsafe-perm in lifecycle true
+8 info my-koa-seed@0.0.1 Failed to exec start script
+9 verbose stack Error: Exit status 1
+9 verbose stack     at ChildProcess.<anonymous> (C:\Users\Attila\AppData\Roaming\nvm\v0.11.14\node_modules\npm\lib\utils\lifecycle.js:212:16)
+9 verbose stack     at ChildProcess.emit (events.js:110:17)
+9 verbose stack     at maybeClose (child_process.js:999:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1071:5)
+10 verbose pkgid my-koa-seed@0.0.1
+11 verbose cwd c:\Dev\Projects\my-koa-feed
+12 error Windows_NT 6.2.9200
+13 error argv "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
+14 error node v0.11.14-nightly-20140819-pre
+15 error npm  v2.0.0
+16 error code ELIFECYCLE
+17 error my-koa-seed@0.0.1 start: `gulp`
+17 error Exit status 1
+18 error Failed at the my-koa-seed@0.0.1 start script.
+18 error This is most likely a problem with the my-koa-seed package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     gulp
+18 error You can get their info via:
+18 error     npm owner ls my-koa-seed
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]
