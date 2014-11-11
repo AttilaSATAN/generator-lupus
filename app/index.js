@@ -1,54 +1,16 @@
 'use strict';
 var util = require('util');
-var path = require('path');
 var yeoman = require('yeoman-generator');
-var yosay = require('yosay');
 
-var MyGeneratorGenerator = yeoman.generators.Base.extend({
+
+var MyGenerator = yeoman.generators.NamedBase.extend({
   initializing: function () {
-    this.pkg = require('../package.json');
+    this.log('You called the my subgenerator with the argument ' + this.name + '.');
   },
 
-  prompting: function () {
-    var done = this.async();
-
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the wondrous MyGenerator generator!'
-    ));
-
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
-
-    this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
-
-      done();
-    }.bind(this));
-  },
-
-  writing: {
-    app: function () {
-      this.dest.mkdir('app');
-      this.dest.mkdir('app/templates');
-
-      this.src.copy('_package.json', 'package.json');
-      this.src.copy('_bower.json', 'bower.json');
-    },
-
-    projectfiles: function () {
-      this.src.copy('editorconfig', '.editorconfig');
-      this.src.copy('jshintrc', '.jshintrc');
-    }
-  },
-
-  end: function () {
-    this.installDependencies();
+  writing: function () {
+    this.template('_controller.js',  'controllers/' + this._.slugify(this.name) + '.controller.js');
   }
 });
 
-module.exports = MyGeneratorGenerator;
+module.exports = MyGenerator;
